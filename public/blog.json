@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead1",
+        "name": "Khalid",
+        "date": "Feb 21, 2021",
+        "email": "khalidprithy@gmail.com",
+        "question": "How will you improve the performance of a React Application?",
+        "answer": "Picked it up from the post office and not an hour later there was a guy in the parking lot trying to hammer out his frozen hitch pin so I offered him the first swings with the hammer it came out easily, we'll see how it lasts in the long run but it seems sturdy and feels great in your hands, I'm stoked to use it!",
+        "photo": "https://zanzidigital.co.uk/wp-content/uploads/2017/08/ecommerce-icon-sales-results.jpg"
+    },
+    {
+        "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead2",
+        "name": "Khalid",
+        "date": "Feb 21, 2021",
+        "email": "khalidprithy@gmail.com",
+        "question": " What are the different ways to manage a state in a React application?",
+        "answer": "Picked it up from the post office and not an hour later there was a guy in the parking lot trying to hammer out his frozen hitch pin so I offered him the first swings with the hammer it came out easily, we'll see how it lasts in the long run but it seems sturdy and feels great in your hands, I'm stoked to use it!",
+        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+    },
+    {
+        "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead3",
+        "name": "Khalid",
+        "date": "Feb 21, 2021",
+        "email": "khalidprithy@gmail.com",
+        "question": "How does prototypical inheritance work?",
+        "answer": "Picked it up from the post office and not an hour later there was a guy in the parking lot trying to hammer out his frozen hitch pin so I offered him the first swings with the hammer it came out easily, we'll see how it lasts in the long run but it seems sturdy and feels great in your hands, I'm stoked to use it!",
+        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+    },
+    {
+        "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead4",
+        "name": "Khalid",
+        "date": "Feb 21, 2021",
+        "email": "khalidprithy@gmail.com",
+        "question": "Why you do not set the state directly in React?",
+        "answer": "Picked it up from the post office and not an hour later there was a guy in the parking lot trying to hammer out his frozen hitch pin so I offered him the first swings with the hammer it came out easily, we'll see how it lasts in the long run but it seems sturdy and feels great in your hands, I'm stoked to use it!",
+        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+    },
+    {
+        "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead5",
+        "name": "Khalid",
+        "date": "Feb 21, 2021",
+        "email": "khalidprithy@gmail.com",
+        "question": "You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?",
+        "answer": "Picked it up from the post office and not an hour later there was a guy in the parking lot trying to hammer out his frozen hitch pin so I offered him the first swings with the hammer it came out easily, we'll see how it lasts in the long run but it seems sturdy and feels great in your hands, I'm stoked to use it!",
+        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+    },
+    {
+        "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead5",
+        "name": "Khalid",
+        "date": "Feb 21, 2021",
+        "email": "khalidprithy@gmail.com",
+        "question": " What is a unit test? Why should write unit tests?",
+        "answer": "Picked it up from the post office and not an hour later there was a guy in the parking lot trying to hammer out his frozen hitch pin so I offered him the first swings with the hammer it came out easily, we'll see how it lasts in the long run but it seems sturdy and feels great in your hands, I'm stoked to use it!",
+        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+    }
+]

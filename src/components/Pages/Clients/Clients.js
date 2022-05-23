@@ -8,7 +8,7 @@ const Clients = () => {
 
     return (
         <div>
-            <h1>Clients</h1>
+            <h1 className='text-2xl font-bold text-center m-2'>Clients</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-2'>
                 {
                     clients.map(client => <AllClients
