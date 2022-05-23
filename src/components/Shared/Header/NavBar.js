@@ -16,25 +16,25 @@ const NavBar = () => {
     </>
 
     return (
-        <div class="navbar bg-primary">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <label tabIndex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" stroke-linejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <div className="navbar bg-primary">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex="1" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-48">
+                    <ul tabIndex="1" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-48">
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' class="btn btn-ghost normal-case text-xl text-white">Toolsegy</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl text-white">Toolsegy</Link>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal p-0">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
             </div>
-            <div class="navbar-end lg:flex">
-                <ul class="menu menu-horizontal p-0">
+            <div className="navbar-end lg:flex">
+                <ul className="menu menu-horizontal p-0">
                     {loginItems}
                 </ul>
             </div>

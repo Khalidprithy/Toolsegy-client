@@ -11,7 +11,7 @@ import SignUp from './components/LoginSystem/SignUp/SignUp';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Dashboard></Dashboard>}></Route>

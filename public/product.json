@@ -1,0 +1,92 @@
+[
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead1",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead2",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead3",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead4",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead5",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead6",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead7",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead8",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead9",
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "stock": 20,
+        "img": "https://ibb.co/56vkTc1",
+        "quantity": 25
+    }
+]

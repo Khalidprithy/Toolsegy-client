@@ -9,7 +9,7 @@ import TopProduct from './TopProduct';
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className='lg:px-12'>
             <Banner></Banner>
             <Chart></Chart>
             <TopProduct></TopProduct>
