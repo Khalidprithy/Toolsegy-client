@@ -5,8 +5,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -15,8 +16,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -25,8 +27,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -35,8 +38,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -45,8 +49,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -55,8 +60,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -65,8 +71,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -75,8 +82,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     },
     {
@@ -85,8 +93,9 @@
         "name": "Hammer Drill",
         "price": 420,
         "brand": "Walton",
-        "stock": 20,
-        "img": "https://ibb.co/56vkTc1",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
         "quantity": 25
     }
 ]
