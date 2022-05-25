@@ -8,7 +8,7 @@ const NavBar = () => {
         <li className='text-white'><Link to='/products'>Products</Link></li>
         <li className='text-white'><Link to='/client'>Client</Link></li>
         <li className='text-white'><Link to='/review'>Review</Link></li>
-        <li className='text-white'><Link to='/Blog'>Blog</Link></li>
+        <li className='text-white'><Link to='/blog'>Blog</Link></li>
     </>
     const loginItems = <>
         <li className='text-white'><Link to='/login'>Login</Link></li>

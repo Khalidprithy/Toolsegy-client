@@ -1,6 +1,5 @@
 [
     {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead1",
         "category": "Power Tool",
         "name": "Hammer Drill",
         "price": 420,
@@ -11,7 +10,56 @@
         "quantity": 25
     },
     {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead2",
+        "category": "Power Tool",
+        "name": "Circular Saw",
+        "price": 139,
+        "brand": "DEWALT",
+        "description": "DEWALT 6-1/2-Inch 20V MAX* Circular Saw, Tool Only (DCS391B)",
+        "photo": "https://i.ibb.co/jR7xfxy/product1.jpg",
+        "minOrder": 5,
+        "quantity": 30
+    },
+    {
+        "category": "Power Tool",
+        "name": "Circular Saw",
+        "price": 74,
+        "brand": "BLACK+DECKER",
+        "description": "BLACK+DECKER BDECS300C 13amp Circular Saw with Laser",
+        "photo": "https://i.ibb.co/gV5hvKV/product2.jpg",
+        "minOrder": 5,
+        "quantity": 25
+    },
+    {
+        "category": "Power Tool",
+        "name": " Drill Driver Set",
+        "price": 420,
+        "brand": "WORKPRO",
+        "description": "WORKPRO 12V Pink Cordless Drill Driver Set, 18+1 Torque Setting, Electric Screwdriver Driver Tool Kit for Women, 3/8 Keyless Chuck, Charger and Storage Bag Included",
+        "photo": "https://i.ibb.co/sqsM20D/product3.jpg",
+        "minOrder": 5,
+        "quantity": 25
+    },
+    {
+        "category": "Power Tool",
+        "name": "Hammer Drill",
+        "price": 420,
+        "brand": "Walton",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/wBhv33T/product4.jpg",
+        "minOrder": 5,
+        "quantity": 25
+    },
+    {
+        "category": "Power Tool",
+        "name": "Table Saw",
+        "price": 129,
+        "brand": "Anmas rucci",
+        "description": "Table Saw, Mini Portable Table Saw, Mini Desktop Saw, Electric Cutting Machine for DIY Handmade Wooden Model Crafts, Metal, Ceramic Tile, Glass Cutting",
+        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
+        "minOrder": 5,
+        "quantity": 25
+    },
+    {
         "category": "Power Tool",
         "name": "Hammer Drill",
         "price": 420,
@@ -22,7 +70,6 @@
         "quantity": 25
     },
     {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead3",
         "category": "Power Tool",
         "name": "Hammer Drill",
         "price": 420,
@@ -33,62 +80,6 @@
         "quantity": 25
     },
     {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead4",
-        "category": "Power Tool",
-        "name": "Hammer Drill",
-        "price": 420,
-        "brand": "Walton",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
-        "minOrder": 5,
-        "quantity": 25
-    },
-    {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead5",
-        "category": "Power Tool",
-        "name": "Hammer Drill",
-        "price": 420,
-        "brand": "Walton",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
-        "minOrder": 5,
-        "quantity": 25
-    },
-    {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead6",
-        "category": "Power Tool",
-        "name": "Hammer Drill",
-        "price": 420,
-        "brand": "Walton",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
-        "minOrder": 5,
-        "quantity": 25
-    },
-    {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead7",
-        "category": "Power Tool",
-        "name": "Hammer Drill",
-        "price": 420,
-        "brand": "Walton",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
-        "minOrder": 5,
-        "quantity": 25
-    },
-    {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead8",
-        "category": "Power Tool",
-        "name": "Hammer Drill",
-        "price": 420,
-        "brand": "Walton",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/rQ1RYyf/s-l640.jpg",
-        "minOrder": 5,
-        "quantity": 25
-    },
-    {
-        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead9",
         "category": "Power Tool",
         "name": "Hammer Drill",
         "price": 420,

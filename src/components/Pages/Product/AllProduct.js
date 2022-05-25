@@ -17,14 +17,15 @@ const AllProduct = ({ product }) => {
                 </div>
             </td>
             <td>
-                {product.description}
-                <br />
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                <p className='text-xs'>
+                    {product.description.slice(0, 80)}
+
+                </p>
             </td>
             <td>{product.quantity}</td>
             <td><input className='border-2 rounded-md px-2 w-10' type="text" value={product.minOrder} /></td>
             <th>
-                <button className="btn btn-xs">Buy Now</button>
+                <button className="btn btn-xs rounded-sm">Buy Now</button>
             </th>
         </tr>
     );

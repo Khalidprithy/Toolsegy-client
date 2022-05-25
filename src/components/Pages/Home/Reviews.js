@@ -27,7 +27,7 @@ const Reviews = () => {
             <div className='text-center m-3'>
                 <button
                     onClick={handleAllReviewBtn}
-                    className='btn btn-sm'>All
+                    className='btn btn-sm rounded-md text-white'>All
                     Reviews<MdRateReview className='ml-2 mt-1 text-xl'></MdRateReview></button>
             </div>
         </div>

@@ -20,7 +20,7 @@ const TopProduct = () => {
                 <h1 className='text-2xl font-bold m-2'>Top Products</h1>
                 <button
                     onClick={handleAllProduct}
-                    className='btn btn-sm text-white'>All Product <FaArrowRight className='ml-1'></FaArrowRight></button>
+                    className='btn btn-sm rounded-md text-white'>All Product <FaArrowRight className='ml-1'></FaArrowRight></button>
 
             </div>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
