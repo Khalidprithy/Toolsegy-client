@@ -1,6 +1,6 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +9,10 @@ import Loading from '../../Shared/Loading';
 const Login = () => {
 
     const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth);
+
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(
+        auth
+    );
     const [
         signInWithEmailAndPassword,
         user,
@@ -27,7 +31,7 @@ const Login = () => {
     }
     let errorMessage;
 
-    if (loading || loadingG) {
+    if (loading || loadingG || sending) {
         return <Loading></Loading>
     }
 
@@ -39,11 +43,22 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
+    const handleReset = async (data) => {
+        const email = data.email;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            alert('Sent email');
+        }
+        else {
+            alert('please enter your email address');
+        }
+    }
+
 
     return (
         <div class="hero min-h-screen bg-white">
             <div class="hero-content flex-col lg:flex-row">
-                <img src="https://www.tutoreye.com/images/home/login-illus-1.svg" class="max-w-sm rounded-lg hidden lg:block shadow-2xl" alt='' />
+                <img src="https://i.ibb.co/51L3Mqz/20943394.jpg" class="max-w-sm rounded-lg hidden lg:block shadow-2xl" alt='' />
                 <div>
                     <div class="card w-80 bg-primary border rounded-md">
                         <div class="card-body">
@@ -55,6 +70,7 @@ const Login = () => {
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div class="form-control w-full max-w-xs">
                                     <input
+
                                         type="email"
                                         placeholder="Your Email"
                                         className="input input-bordered w-full max-w-xs"
@@ -96,10 +112,21 @@ const Login = () => {
 
                                     </label>
                                 </div>
+
                                 {errorMessage}
                                 <input className='btn w-full text-white' type="submit" value='Login' />
                             </form>
-                            <div className='flex items-center'>
+                            <div className='flex items-baseline'>
+                                <p className='text-white p-0 m-0'>Forgot Password?  </p>
+                                <p>
+                                    <button
+                                        onClick={handleReset}
+                                        className='btn btn-link text-xs text-orange-500 p-0 m-0'>Reset</button>
+                                </p>
+                            </div>
+                            <div
+
+                                className='flex items-center'>
                                 <p className='text-white'>Dont have an account?<Link className='btn btn-link text-xs text-orange-500' to='/signup'>Sign Up</Link> </p>
                             </div>
                         </div>

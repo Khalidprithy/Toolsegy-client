@@ -10,6 +10,7 @@ import Footer from './components/Shared/Footer/Footer';
 import AllReview from './components/Pages/Reviews/AllReview';
 import Blog from './components/Pages/Blog/Blog';
 import RequireAuth from './components/Shared/RequireAuth';
+import Purchase from './components/Pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
         <Route path='/products' element={
           <RequireAuth>
             <Product></Product>
+          </RequireAuth>}>
+        </Route>
+        <Route path='/products/:id' element={
+          <RequireAuth>
+            <Purchase></Purchase>
           </RequireAuth>}>
         </Route>
         <Route path='/client' element={<Clients></Clients>}></Route>

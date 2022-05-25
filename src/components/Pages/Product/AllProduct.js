@@ -1,6 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AllProduct = ({ product }) => {
+    const navigate = useNavigate();
+    const { _id } = product;
+
+    const handlePurchase = id => {
+        navigate(`/products/${id}`)
+    }
+
+
     return (
         <tr>
             <td>
@@ -25,7 +34,9 @@ const AllProduct = ({ product }) => {
             <td>{product.quantity}</td>
             <td><input className='border-2 rounded-md px-2 w-10' type="text" value={product.minOrder} /></td>
             <th>
-                <button className="btn btn-xs rounded-sm">Buy Now</button>
+                <button
+                    onClick={() => handlePurchase(_id)}
+                    className="btn btn-xs rounded-sm">Buy Now</button>
             </th>
         </tr>
     );
