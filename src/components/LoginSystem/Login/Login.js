@@ -3,13 +3,12 @@ import { FcGoogle } from 'react-icons/fc';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading';
 
 const Login = () => {
 
     const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth);
-
     const [
         signInWithEmailAndPassword,
         user,
@@ -18,6 +17,9 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/';
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
@@ -33,8 +35,8 @@ const Login = () => {
         errorMessage = <p className='text-orange-500'>{error?.message || errorG?.message}</p>
     }
 
-    if (user) {
-        console.log(user)
+    if (user || userG) {
+        navigate(from, { replace: true });
     }
 
 
