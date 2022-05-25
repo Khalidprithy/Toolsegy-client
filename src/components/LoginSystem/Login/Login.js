@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import Loading from '../../Shared/Loading';
 
 const Login = () => {
 
@@ -18,7 +19,19 @@ const Login = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        signInWithEmailAndPassword(data.email, data.password)
+        console.log(data);
+    }
+    let errorMessage;
+
+    if (loading || loadingG) {
+        return <Loading></Loading>
+    }
+
+    if (error || errorG) {
+        errorMessage = <p className='text-orange-500'>{error?.message || errorG?.message}</p>
+    }
 
     if (user) {
         console.log(user)
@@ -70,8 +83,8 @@ const Login = () => {
                                                 message: 'Please Enter You Password'
                                             },
                                             pattern: {
-                                                value: /"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/,
-                                                message: 'Enter a valid password'
+                                                value: /(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/,
+                                                message: 'Password must contain one special character and one number'
                                             }
                                         })}
                                     />
@@ -81,6 +94,7 @@ const Login = () => {
 
                                     </label>
                                 </div>
+                                {errorMessage}
                                 <input className='btn w-full text-white' type="submit" value='Login' />
                             </form>
                             <div className='flex items-center'>

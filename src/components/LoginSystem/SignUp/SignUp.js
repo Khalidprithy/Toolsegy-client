@@ -1,19 +1,44 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading';
 
 const SignUp = () => {
 
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = async data => {
+        console.log(data);
+        createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name })
+        console.log('Profile Updated');
+        navigate('/')
+    }
 
-    if (user) {
-        console.log(user)
+    let errorMessage;
+
+    if (loading || loadingG || updating) {
+        return <Loading></Loading>
+    }
+
+    if (error || errorG || updateError) {
+        errorMessage = <p className='text-orange-500'>{error?.message || errorG?.message || updateError?.message}</p>
+    }
+
+    if (user || userG) {
+        console.log(user, userG)
     }
 
 
@@ -24,12 +49,28 @@ const SignUp = () => {
                 <div>
                     <div class="card w-80 bg-primary border rounded-md">
                         <div class="card-body">
-                            <h2 class="text-2xl m-2 font-bold text-center text-white">Login</h2>
+                            <h2 class="text-2xl m-2 font-bold text-center text-white">Sign Up</h2>
                             <button
                                 onClick={() => signInWithGoogle()}
-                                class="btn border-white hover:border-white text-black hover:text-white bg-white"><FcGoogle className='mr-2'></FcGoogle>Sign in with Google</button>
+                                class="btn border-white hover:border-white text-black hover:text-white bg-white"><FcGoogle className='mr-2'></FcGoogle>Sign Up with Google</button>
                             <div class="divider text-white">OR</div>
                             <form onSubmit={handleSubmit(onSubmit)}>
+                                <div class="form-control w-full max-w-xs">
+                                    <input
+                                        type="text"
+                                        placeholder="Your Name"
+                                        className="input input-bordered w-full max-w-xs"
+                                        {...register("name", {
+                                            required: {
+                                                value: true,
+                                                message: 'Please Enter You Name'
+                                            }
+                                        })}
+                                    />
+                                    <label className="label">
+                                        {errors.name?.type === 'required' && <span className="label-text-alt text-orange-500">{errors.name.message}</span>}
+                                    </label>
+                                </div>
                                 <div class="form-control w-full max-w-xs">
                                     <input
                                         type="email"
@@ -62,8 +103,8 @@ const SignUp = () => {
                                                 message: 'Please Enter You Password'
                                             },
                                             pattern: {
-                                                value: /"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/,
-                                                message: 'Enter a valid password'
+                                                value: /(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/,
+                                                message: 'Password must contain one special character and one number'
                                             }
                                         })}
                                     />
@@ -73,7 +114,8 @@ const SignUp = () => {
 
                                     </label>
                                 </div>
-                                <input className='btn w-full text-white' type="submit" value='Login' />
+                                {errorMessage}
+                                <input className='btn w-full text-white' type="submit" value='SignUp' />
                             </form>
                             <div className='flex items-center'>
                                 <p className='text-white'>Already have an account?<Link className='btn btn-link text-xs text-orange-500' to='/login'>Login</Link> </p>
