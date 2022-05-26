@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Purchase = () => {
 
+    const navigate = useNavigate();
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const [user] = useAuthState(auth);
@@ -31,7 +32,8 @@ const Purchase = () => {
         if (orderQuantity > product.quantity) {
             return toast.error('Not available')
         }
-        const quantity = JSON.parse(product?.quantity) - JSON.parse(orderQuantity);
+        // const quantity = JSON.parse(product?.quantity) - JSON.parse(orderQuantity);
+        const quantity = orderQuantity;
 
         const purchase = {
             productId: _id,
@@ -48,6 +50,7 @@ const Purchase = () => {
             address: event.target.address.value,
         }
         console.log(purchase);
+
 
         fetch('http://localhost:5000/purchase', {
             method: 'POST',
@@ -68,47 +71,60 @@ const Purchase = () => {
             })
     }
 
+    const handleGoBack = () => {
+        navigate('/products')
+    }
+
     return (
         <div>
-            <div>
-                <p className='text-2xl font-bold text-center'>Product Purchase Information</p>
-            </div>
-            <div>
+            <div className='flex items-center'>
                 <div>
-                    <button className='btn btn-sm rounded-md m-2'>Go Back</button>
+                    <button
+                        onClick={handleGoBack}
+                        className='btn btn-sm rounded-md m-2'>Go Back</button>
                 </div>
-                <div class="hero min-h-screen">
-                    <div class="hero-content flex-col md:flex-row">
+                <div>
+                    <p className='md:text-2xl text-xl font-bold text-center md:ml-28' >Product Purchase Information</p>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div className="hero min-h-screen">
+                    <div className="hero-content flex-col md:flex-row">
                         <img className='w-64 md:w-72 lg:w-96 rounded-lg' src={product.photo} alt='' />
                         <div className='card-body'>
                             <h4 className='text-2xl font-bold text-center'>Product Details</h4>
                             <form onSubmit={handlePurchase}>
-                                <h1 class="text-xl font-bold">{product.description}</h1>
+                                <h1 className="text-xl font-bold">{product.description}</h1>
                                 <ul>
-                                    <input type="text" name='name' value={product.name} class="input text-2xl w-full max-w-xs" readOnly />
+                                    <input type="text" name='name' value={product.name} className="input text-2xl w-full max-w-xs" readOnly />
                                     <li><span className='font-bold'>Brand: </span>{product.brand}</li>
                                     <li><span className='font-bold'>Category:</span> {product.category}</li>
                                     <li><span className='font-bold'>Price:</span> {product.price}</li>
                                     <li><span className='font-bold'>Quantity:</span> {product.quantity}</li>
                                     <li><span className='font-bold'>Minimum Order:</span> {product.minOrder}</li>
                                     <p className='text-sm font-bold m-1 '>Enter order quantity</p>
-                                    <input type="number" name="orderQuantity" class="input input-sm input-bordered rounded-sm mb-2 w-1/12 max-w-lg" />
+                                    <input
+
+                                        type="number" name="orderQuantity" className="input input-sm input-bordered rounded-sm mb-2 w-20 max-w-lg" />
                                 </ul>
                                 <h4 className='text-xl font-bold text-center'>Purchase Information</h4>
 
 
-                                <input type="text" name='userName' value={user?.displayName} class="input input-sm input-bordered mb-2 w-full max-w-lg" readOnly />
-                                <input type="email" name='email' value={user?.email} class="input input-sm input-bordered mb-2 w-full max-w-lg" readOnly />
-                                <input type="text" name='address' placeholder='Enter your address' class="input input-bordered mb-2 w-full max-w-lg" />
-                                <input type="text" name='phone' placeholder='Enter your phone number' class="input input-bordered mb-2 w-full max-w-lg" />
+                                <input type="text" name='userName' value={user?.displayName} className="input input-sm input-bordered mb-2 w-full max-w-lg" readOnly />
+                                <input type="email" name='email' value={user?.email} className="input input-sm input-bordered mb-2 w-full max-w-lg" readOnly />
+                                <input type="text" name='address' placeholder='Enter your address' className="input input-bordered mb-2 w-full max-w-lg" />
+                                <input type="text" name='phone' placeholder='Enter your phone number' className="input input-bordered mb-2 w-full max-w-lg" />
                                 <input type="submit" value='Purchase' className='btn btn-primary mb-2 w-full max-w-lg' />
                             </form>
                             <Toaster />
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
 
 
     );

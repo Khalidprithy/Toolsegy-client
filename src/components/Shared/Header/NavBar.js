@@ -9,6 +9,7 @@ const NavBar = () => {
 
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
     };
 
 
@@ -18,12 +19,15 @@ const NavBar = () => {
         <li className='text-white'><Link to='/client'>Client</Link></li>
         <li className='text-white'><Link to='/review'>Review</Link></li>
         <li className='text-white'><Link to='/blog'>Blog</Link></li>
+        {
+            user && <li className='text-white'><Link to='/dashboard'>Dashboard</Link></li>
+        }
     </>
     const loginItems = <>
 
         <li className='text-white'>
             {
-                user ? <button onClick={logout} class="btn btn-ghost">Sign Out</button> : <Link to='/login'>LOGIN</Link>
+                user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> : <Link to='/login'>LOGIN</Link>
             }
         </li>
     </>
@@ -50,6 +54,11 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal p-0">
                     {loginItems}
                 </ul>
+                <div>
+                    <label tabIndex="2" for="my-dashboard-btn" className="btn btn-ghost md:hidden lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                </div>
             </div>
         </div>
     );

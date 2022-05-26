@@ -5,6 +5,7 @@ import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading';
+import useToken from '../../../hooks/useToken';
 
 const SignUp = () => {
 
@@ -19,12 +20,13 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+    const [token] = useToken(user || userG);
+
     const onSubmit = async data => {
-        console.log(data);
         createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name })
         console.log('Profile Updated');
-        navigate('/')
+        // navigate('/')
     }
 
     let errorMessage;
@@ -37,25 +39,25 @@ const SignUp = () => {
         errorMessage = <p className='text-orange-500'>{error?.message || errorG?.message || updateError?.message}</p>
     }
 
-    if (user || userG) {
-        console.log(user, userG)
+    if (token) {
+        navigate('/')
     }
 
 
     return (
-        <div class="hero min-h-screen bg-white">
-            <div class="hero-content flex-col lg:flex-row">
-                <img src="https://www.tutoreye.com/images/home/login-illus-1.svg" class="max-w-sm rounded-lg hidden lg:block shadow-2xl" alt='' />
+        <div className="hero min-h-screen bg-white">
+            <div className="hero-content flex-col lg:flex-row">
+                <img src="https://www.tutoreye.com/images/home/login-illus-1.svg" className="max-w-sm rounded-lg hidden lg:block shadow-2xl" alt='' />
                 <div>
-                    <div class="card w-80 bg-primary border rounded-md">
-                        <div class="card-body">
-                            <h2 class="text-2xl m-2 font-bold text-center text-white">Sign Up</h2>
+                    <div className="card w-80 bg-primary border rounded-md">
+                        <div className="card-body">
+                            <h2 className="text-2xl m-2 font-bold text-center text-white">Sign Up</h2>
                             <button
                                 onClick={() => signInWithGoogle()}
-                                class="btn border-white hover:border-white text-black hover:text-white bg-white"><FcGoogle className='mr-2'></FcGoogle>Sign Up with Google</button>
-                            <div class="divider text-white">OR</div>
+                                className="btn border-white hover:border-white text-black hover:text-white bg-white"><FcGoogle className='mr-2'></FcGoogle>Sign Up with Google</button>
+                            <div className="divider text-white">OR</div>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div class="form-control w-full max-w-xs">
+                                <div className="form-control w-full max-w-xs">
                                     <input
                                         type="text"
                                         placeholder="Your Name"
@@ -71,7 +73,7 @@ const SignUp = () => {
                                         {errors.name?.type === 'required' && <span className="label-text-alt text-orange-500">{errors.name.message}</span>}
                                     </label>
                                 </div>
-                                <div class="form-control w-full max-w-xs">
+                                <div className="form-control w-full max-w-xs">
                                     <input
                                         type="email"
                                         placeholder="Your Email"
@@ -92,11 +94,11 @@ const SignUp = () => {
                                         {errors.email?.type === 'pattern' && <span className="label-text-alt text-orange-500">{errors.email.message}</span>}
                                     </label>
                                 </div>
-                                <div class="form-control w-full max-w-xs">
+                                <div className="form-control w-full max-w-xs">
                                     <input
                                         type="password"
                                         placeholder="Your Password"
-                                        class="input input-bordered w-full max-w-xs "
+                                        className="input input-bordered w-full max-w-xs "
                                         {...register("password", {
                                             required: {
                                                 value: true,
@@ -108,9 +110,9 @@ const SignUp = () => {
                                             }
                                         })}
                                     />
-                                    <label class="label">
-                                        {errors.password?.type === 'required' && <span class="label-text-alt text-orange-500">{errors.password.message}</span>}
-                                        {errors.password?.type === 'pattern' && <span class="label-text-alt text-orange-500">{errors.password.message}</span>}
+                                    <label className="label">
+                                        {errors.password?.type === 'required' && <span className="label-text-alt text-orange-500">{errors.password.message}</span>}
+                                        {errors.password?.type === 'pattern' && <span className="label-text-alt text-orange-500">{errors.password.message}</span>}
 
                                     </label>
                                 </div>

@@ -27,7 +27,7 @@ const AllProduct = ({ product }) => {
             </td>
             <td>
                 <p className='text-xs'>
-                    {product.description.slice(0, 80)}
+                    {product.description.slice(0, 60)}
 
                 </p>
             </td>

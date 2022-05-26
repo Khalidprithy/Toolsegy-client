@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
 
@@ -20,10 +21,18 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || userG)
+
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
+
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
@@ -39,9 +48,7 @@ const Login = () => {
         errorMessage = <p className='text-orange-500'>{error?.message || errorG?.message}</p>
     }
 
-    if (user || userG) {
-        navigate(from, { replace: true });
-    }
+
 
     const handleReset = async (data) => {
         const email = data.email;
@@ -56,19 +63,19 @@ const Login = () => {
 
 
     return (
-        <div class="hero min-h-screen bg-white">
-            <div class="hero-content flex-col lg:flex-row">
-                <img src="https://i.ibb.co/51L3Mqz/20943394.jpg" class="max-w-sm rounded-lg hidden lg:block shadow-2xl" alt='' />
+        <div className="hero min-h-screen bg-white">
+            <div className="hero-content flex-col lg:flex-row">
+                <img src="https://i.ibb.co/51L3Mqz/20943394.jpg" className="max-w-sm rounded-lg hidden lg:block shadow-2xl" alt='' />
                 <div>
-                    <div class="card w-80 bg-primary border rounded-md">
-                        <div class="card-body">
-                            <h2 class="text-2xl m-2 font-bold text-center text-white">Login</h2>
+                    <div className="card w-80 bg-primary border rounded-md">
+                        <div className="card-body">
+                            <h2 className="text-2xl m-2 font-bold text-center text-white">Login</h2>
                             <button
                                 onClick={() => signInWithGoogle()}
-                                class="btn border-white hover:border-white text-black hover:text-white bg-white"><FcGoogle className='mr-2'></FcGoogle>Sign in with Google</button>
-                            <div class="divider text-white">OR</div>
+                                className="btn border-white hover:border-white text-black hover:text-white bg-white"><FcGoogle className='mr-2'></FcGoogle>Sign in with Google</button>
+                            <div className="divider text-white">OR</div>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div class="form-control w-full max-w-xs">
+                                <div className="form-control w-full max-w-xs">
                                     <input
 
                                         type="email"
@@ -90,11 +97,11 @@ const Login = () => {
                                         {errors.email?.type === 'pattern' && <span className="label-text-alt text-orange-500">{errors.email.message}</span>}
                                     </label>
                                 </div>
-                                <div class="form-control w-full max-w-xs">
+                                <div className="form-control w-full max-w-xs">
                                     <input
                                         type="password"
                                         placeholder="Your Password"
-                                        class="input input-bordered w-full max-w-xs "
+                                        className="input input-bordered w-full max-w-xs "
                                         {...register("password", {
                                             required: {
                                                 value: true,
@@ -106,9 +113,9 @@ const Login = () => {
                                             }
                                         })}
                                     />
-                                    <label class="label">
-                                        {errors.password?.type === 'required' && <span class="label-text-alt text-orange-500">{errors.password.message}</span>}
-                                        {errors.password?.type === 'pattern' && <span class="label-text-alt text-orange-500">{errors.password.message}</span>}
+                                    <label className="label">
+                                        {errors.password?.type === 'required' && <span className="label-text-alt text-orange-500">{errors.password.message}</span>}
+                                        {errors.password?.type === 'pattern' && <span className="label-text-alt text-orange-500">{errors.password.message}</span>}
 
                                     </label>
                                 </div>
