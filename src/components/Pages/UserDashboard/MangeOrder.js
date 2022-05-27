@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query'
 import Loading from '../../Shared/Loading';
+import ConfirmDelete from './ConfirmDelete';
 import OrderRow from './OrderRow';
 
 const MangeOrder = () => {
+
+    const [deleteProduct, setDeleteProduct] = useState(false);
+
 
     const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/purchase', {
         headers: {
@@ -36,13 +40,20 @@ const MangeOrder = () => {
                                 index={index}
                                 order={order}
                                 refetch={refetch}
+                                setDeleteProduct={setDeleteProduct}
                             ></OrderRow>)
                         }
 
                     </tbody>
-
                 </table>
             </div>
+            {
+                deleteProduct && <ConfirmDelete
+                    refetch={refetch}
+                    deleteProduct={deleteProduct}
+                    setDeleteProduct={setDeleteProduct}
+                ></ConfirmDelete>
+            }
         </div>
     );
 };

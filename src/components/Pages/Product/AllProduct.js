@@ -32,6 +32,7 @@ const AllProduct = ({ product }) => {
                 </p>
             </td>
             <td>{product.quantity}</td>
+            <td> ${product.price}</td>
             <td><p>{product.minOrder}</p></td>
             <th>
                 <button

@@ -19,6 +19,7 @@ import { Toaster } from 'react-hot-toast';
 import RequireAdmin from './components/Shared/RequireAdmin';
 import AddProduct from './components/Pages/UserDashboard/AddProduct';
 import MangeOrder from './components/Pages/UserDashboard/MangeOrder';
+import Payment from './components/Pages/UserDashboard/Payment';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           </RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='myreview' element={<MyReviews></MyReviews>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageOrder' element={<RequireAdmin><MangeOrder></MangeOrder></RequireAdmin>}></Route>

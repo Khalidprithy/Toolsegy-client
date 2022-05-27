@@ -17,7 +17,7 @@ const ShowProduct = ({ product }) => {
                 <p>{product.description.slice(0, 100)}</p>
                 <div className='flex'>
                     <p><small>Quantity: {product.quantity}</small></p>
-                    <p><small>Price: {product.price}</small></p>
+                    <p><small>Price: ${product.price}</small></p>
                 </div>
                 <p><small>Minimum Order: {product?.minOrder}</small></p>
                 <div className="card-actions justify-center">

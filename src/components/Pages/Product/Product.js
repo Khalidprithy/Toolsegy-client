@@ -16,6 +16,7 @@ const Product = () => {
                             <th>Name</th>
                             <th>Description</th>
                             <th>Quantity</th>
+                            <th>Price</th>
                             <th>Min Order</th>
                             <th>Action</th>
                         </tr>
