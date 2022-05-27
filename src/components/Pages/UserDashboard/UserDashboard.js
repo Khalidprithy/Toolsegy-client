@@ -23,7 +23,12 @@ const UserDashboard = () => {
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                     <li className='font-bold'><Link to='/dashboard'>My Orders</Link></li>
                     <li className='font-bold'><Link to='/dashboard/myreview'>My Review</Link></li>
-                    {admin && <li className='font-bold'><Link to='/dashboard/users'>All Users</Link></li>}
+                    {admin && <>
+                        <li className='font-bold'><Link to='/dashboard/users'>All Users</Link></li>
+                        <li className='font-bold'><Link to='/dashboard/addProduct'>Add Product</Link></li>
+                        <li className='font-bold'><Link to='/dashboard/manageOrder'>Manage Orders</Link></li>
+                    </>
+                    }
                 </ul>
 
             </div>

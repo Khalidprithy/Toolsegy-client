@@ -1,8 +1,29 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { AiFillDelete } from 'react-icons/ai';
 
-const OrderRow = ({ order, index }) => {
+const OrderRow = ({ order, index, refetch }) => {
+    const { email } = order;
+
+    const handleDelete = email => {
+        fetch(`http://localhost:5000/purchase/${email}`, {
+            method: 'DELETE',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.deletedCount) {
+                    toast.success(`Order ${order.name} is deleted`)
+                    refetch()
+                }
+            })
+    }
+
     return (
+
         <tr>
             <td>{index + 1}</td>
             <td>
@@ -21,14 +42,17 @@ const OrderRow = ({ order, index }) => {
             <td>
                 {order.address}
                 <br />
-                <span className="badge badge-ghost badge-sm">{order.phone}</span>
+                <span className="badge badge-ghost badge-sm">{order.email}</span>
             </td>
             <td>{order.quantity}</td>
             <th>
                 <button className="btn btn-ghost btn-xs">{order.brand}</button>
             </th>
             <th >
-                <button className="tooltip" data-tip="Delete"><AiFillDelete className='text-red-500'></AiFillDelete></button>
+                <label for="confirm-delete" className="tooltip" data-tip="Delete"><AiFillDelete className='text-red-500'></AiFillDelete></label>
+                <button
+                    onClick={() => handleDelete(email)}
+                    className="tooltip" data-tip="Delete"><AiFillDelete className='text-red-500'></AiFillDelete></button>
             </th>
         </tr >
     );

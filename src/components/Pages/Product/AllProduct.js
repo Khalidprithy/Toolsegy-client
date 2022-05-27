@@ -32,7 +32,7 @@ const AllProduct = ({ product }) => {
                 </p>
             </td>
             <td>{product.quantity}</td>
-            <td><input className='border-2 rounded-md px-2 w-10' type="text" value={product.minOrder} /></td>
+            <td><p>{product.minOrder}</p></td>
             <th>
                 <button
                     onClick={() => handlePurchase(_id)}
