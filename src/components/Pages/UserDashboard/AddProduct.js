@@ -35,9 +35,9 @@ const AddProduct = () => {
                         brand: data.brand,
                         description: data.description,
                         category: data.category,
-                        price: data.price,
-                        quantity: data.quantity,
-                        minOrder: data.minOrder,
+                        price: parseInt(data.price),
+                        quantity: parseInt(data.quantity),
+                        minOrder: parseInt(data.minOrder),
                         photo: img
 
                     }
@@ -106,7 +106,7 @@ const AddProduct = () => {
                     <input className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Description' {...register("description", { required: true, maxLength: 30 })} />
 
                     <div className="form-control w-full max-w-xs">
-                        <select class="select select-sm select-bordered w-full max-w-xs m-1" {...register("category")}>
+                        <select className="select select-sm select-bordered w-full max-w-xs m-1" {...register("category")}>
                             <option>Power Tool</option>
                             <option>Hand Tool</option>
                             <option>Repair Parts</option>

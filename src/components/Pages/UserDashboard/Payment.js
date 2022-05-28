@@ -6,6 +6,7 @@ import Loading from '../../Shared/Loading';
 const Payment = () => {
     const { id } = useParams();
     const url = `http://localhost:5000/purchase/${id}`;
+    console.log(url)
     const { data: payment, isLoading } = useQuery(['purchase', id], () => fetch(url, {
         method: 'GET',
         headers: {
@@ -20,17 +21,17 @@ const Payment = () => {
 
     return (
         <div>
-            <div class="card w-50 max-w-md bg-primary text-primary-content">
-                <div class="card-body">
-                    <h2 class="card-title">Make payment for {payment.name}</h2>
+            <div className="card w-50 max-w-md bg-primary text-primary-content">
+                <div className="card-body">
+                    <h2 className="card-title">Make payment for {payment.name}</h2>
                     <p>Thank for shopping</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn">Buy Now</button>
+                    <div className="card-actions justify-end">
+                        <button className="btn">Buy Now</button>
                     </div>
                 </div>
             </div>
-            <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
-                <div class="card-body">
+            <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
+                <div className="card-body">
 
                 </div>
             </div>

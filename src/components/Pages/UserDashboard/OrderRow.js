@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const OrderRow = ({ order, index, refetch, setDeleteProduct }) => {
 
-
+    console.log(order._id)
     return (
 
         <tr>

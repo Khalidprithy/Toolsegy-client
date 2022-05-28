@@ -9,7 +9,7 @@ const MangeOrder = () => {
     const [deleteProduct, setDeleteProduct] = useState(false);
 
 
-    const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/purchase', {
+    const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/allOrder', {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -31,6 +31,7 @@ const MangeOrder = () => {
                             <th>Quantity</th>
                             <th>Brand</th>
                             <th>Action</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,11 +40,10 @@ const MangeOrder = () => {
                                 key={order._id}
                                 index={index}
                                 order={order}
-                                refetch={refetch}
                                 setDeleteProduct={setDeleteProduct}
+                                refetch={refetch}
                             ></OrderRow>)
                         }
-
                     </tbody>
                 </table>
             </div>

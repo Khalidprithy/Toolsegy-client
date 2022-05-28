@@ -2,23 +2,16 @@ import React from 'react';
 
 const ShowReview = ({ review }) => {
     return (
-        <div className="card card-compact lg:max-w-lg border rounded-lg bg-base-100">
-            <div className="avatar mx-auto">
-                <div className="w-16 rounded-full mt-4">
-                    <img src={review.photo} alt='' />
-                </div>
-            </div>
-            <div className="card-body">
-                <h2 className="card-title">{review.name}</h2>
-                <h4>Reviewed on: {review.date}</h4>
-                <p>{review.review.slice(0, 200)}..</p>
-                <div className="card-actions justify-start">
-                    <div className="rating">
-                        <input type="radio" name="rating-1" className="mask mask-star" />
-                        <input type="radio" name="rating-1" className="mask mask-star" />
-                        <input type="radio" name="rating-1" className="mask mask-star" />
-                        <input type="radio" name="rating-1" className="mask mask-star" />
-                        <input type="radio" name="rating-1" className="mask mask-star" />
+        <div class="carousel-item">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions">
+                        <button class="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>

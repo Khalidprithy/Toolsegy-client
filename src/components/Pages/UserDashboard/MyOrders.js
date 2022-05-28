@@ -20,11 +20,10 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                    console.log(res)
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
                         localStorage.removeItem('accessToken');
-                        navigate('/')
+                        navigate('/login')
                     }
                     return res.json()
                 })
@@ -54,9 +53,7 @@ const MyOrders = () => {
                                 order={order}
                             ></OrderRow>)
                         }
-
                     </tbody>
-
                 </table>
             </div>
         </div>
