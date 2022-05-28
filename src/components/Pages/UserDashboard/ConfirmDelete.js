@@ -5,7 +5,7 @@ const ConfirmDelete = ({ deleteProduct, refetch, setDeleteProduct }) => {
     const { name, email } = deleteProduct;
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/purchase/${email}`, {
+        fetch(`https://radiant-depths-23183.herokuapp.com/purchase/${email}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

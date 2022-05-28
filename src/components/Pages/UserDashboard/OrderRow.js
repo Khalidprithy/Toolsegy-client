@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const OrderRow = ({ order, index, refetch, setDeleteProduct }) => {
 
-    console.log(order._id)
     return (
 
         <tr>
@@ -12,7 +11,7 @@ const OrderRow = ({ order, index, refetch, setDeleteProduct }) => {
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
+                        <div className="mask w-12 h-12">
                             <img src={order.photo} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
@@ -37,7 +36,10 @@ const OrderRow = ({ order, index, refetch, setDeleteProduct }) => {
                     for="confirm-delete" className="tooltip" data-tip="Delete"><AiFillDelete className='text-red-500'></AiFillDelete></label>
             </th>
             <th>
-                {(!order.paid) ? <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success'>Pay Now</button></Link> : <span className='text-green-500'>Paid</span>}
+                {(!order.paid) ? <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success'>Pay Now</button></Link> : <div>
+                    <span className='text-green-500'>Paid</span>
+                    <p>Transaction id <br /> <span className='text-black'> {order.transactionId}</span></p>
+                </div>}
             </th>
         </tr >
     );

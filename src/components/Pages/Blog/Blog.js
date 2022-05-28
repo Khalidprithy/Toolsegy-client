@@ -6,7 +6,7 @@ const Blog = () => {
     const [blogs] = useBlogs();
     return (
         <div>
-            <h1>Blogs</h1>
+            <h1 className='text-xl md:text-2xl font-bold text-center m-5'>Here are some of my blogs about React</h1>
             <div>
                 {
                     blogs.map(blog => <ShowBlog

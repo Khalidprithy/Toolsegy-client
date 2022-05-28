@@ -13,7 +13,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchase?email=${user.email}`, {
+            fetch(`https://radiant-depths-23183.herokuapp.com/purchase?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const MyOrders = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Address/Phone</th>
+                            <th>Address/Email</th>
                             <th>Quantity</th>
                             <th>Brand</th>
                             <th>Action</th>

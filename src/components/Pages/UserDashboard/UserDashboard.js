@@ -19,16 +19,22 @@ const UserDashboard = () => {
             <div className="drawer-side">
                 <label for="my-dashboard-btn" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto bg-primary lg:bg-white lg:text-primary lg:w-60 w-48 md:bg-primary text-white">
-                    <li className='font-bold'><Link to='/dashboard'>My Orders</Link></li>
-                    <li className='font-bold'><Link to='/dashboard/myreview'>My Review</Link></li>
-                    {admin && <>
-                        <li className='font-bold'><Link to='/dashboard/users'>Manage User</Link></li>
-                        <li className='font-bold'><Link to='/dashboard/addProduct'>Add Product</Link></li>
-                        <li className='font-bold'><Link to='/dashboard/manageOrder'>Manage Orders</Link></li>
-                    </>
+                    <li className='font-bold'><Link to='/dashboard/profile'>My Profile</Link></li>
+                    {
+                        (user && !admin) && <>
+                            <li className='font-bold'><Link to='/dashboard/myreview/:id'>Add Review</Link></li>
+                            <li className='font-bold'><Link to='/dashboard'>My Orders</Link></li>
+                        </>
+                    }
+                    {
+                        (admin) && <>
+                            <li className='font-bold'><Link to='/dashboard/users'>Manage User</Link></li>
+                            <li className='font-bold'><Link to='/dashboard/addProduct'>Add Product</Link></li>
+                            <li className='font-bold'><Link to='/dashboard/manageOrder'>Manage Orders</Link></li>
+                        </>
                     }
                 </ul>
-
+                r
             </div>
         </div>
     );

@@ -145,3 +145,12 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+/* 
+
+     <p>Password 'test&examin12' </p>
+     <p>Email 'examiner@tester.com' </p>
+                
+*/

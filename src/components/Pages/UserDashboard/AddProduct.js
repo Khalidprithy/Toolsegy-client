@@ -41,7 +41,7 @@ const AddProduct = () => {
                         photo: img
 
                     }
-                    fetch('http://localhost:5000/products', {
+                    fetch('https://radiant-depths-23183.herokuapp.com/products', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -101,9 +101,9 @@ const AddProduct = () => {
 
                     <input className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Product Name' {...register("productName", { required: true })} />
 
-                    <input className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Brand' {...register("brand", { required: true, maxLength: 10 })} />
+                    <input className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Brand' {...register("brand", { required: true, maxLength: 20 })} />
 
-                    <input className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Description' {...register("description", { required: true, maxLength: 30 })} />
+                    <input className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Description' {...register("description", { required: true })} />
 
                     <div className="form-control w-full max-w-xs">
                         <select className="select select-sm select-bordered w-full max-w-xs m-1" {...register("category")}>
@@ -114,13 +114,13 @@ const AddProduct = () => {
                         </select>
                     </div>
 
-                    <input type="number" className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Price' {...register("price")} />
+                    <input type="number" className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Price' {...register("price", { required: true })} />
 
-                    <input type="number" className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Quantity' {...register("quantity", { min: 18, max: 99 })} />
+                    <input type="number" className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Quantity' {...register("quantity", { required: true, min: 5, max: 100000 })} />
 
-                    <input type="number" className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Minimum Order' {...register("minOrder", { min: 5, max: 20 })} />
+                    <input type="number" className='input input-sm input-bordered w-full max-w-xs m-1' placeholder='Minimum Order' {...register("minOrder", { required: true, min: 5, max: 20 })} />
 
-                    <input className='input input-sm input-bordered w-full max-w-xs m-1' type='file' placeholder='Photo URL' {...register("photo")} />
+                    <input className='input input-sm input-bordered w-full max-w-xs m-1' type='file' placeholder='Photo URL' {...register("photo", { required: true })} />
 
                     <input className='btn btn-md w-full max-w-xs m-1' type="submit" value='Add Product' />
                 </div>

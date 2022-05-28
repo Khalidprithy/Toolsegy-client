@@ -10,10 +10,10 @@ const Dashboard = () => {
     return (
         <div className='lg:px-12'>
             <Banner></Banner>
-            <BusinessSummary></BusinessSummary>
             {/* <Chart></Chart> */}
             <TopProduct></TopProduct>
             <TopClients></TopClients>
+            <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
         </div>
     );

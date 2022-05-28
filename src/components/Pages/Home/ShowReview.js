@@ -2,17 +2,14 @@ import React from 'react';
 
 const ShowReview = ({ review }) => {
     return (
-        <div class="carousel-item">
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure class="px-10 pt-10">
-                    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
+        <div className="carousel-item">
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                    <img src={review.photo} alt="Shoes" className="rounded-xl" />
                 </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                    </div>
+                <div className="card-body items-center text-center">
+                    <h2 className="card-title">{review.name}</h2>
+                    <p>{review.review}</p>
                 </div>
             </div>
         </div>

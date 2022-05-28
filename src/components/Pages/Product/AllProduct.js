@@ -8,7 +8,9 @@ const AllProduct = ({ product }) => {
     const handlePurchase = id => {
         navigate(`/products/${id}`)
     }
-
+    const handleReview = id => {
+        navigate(`/dashboard/myreview/${id}`)
+    }
 
     return (
         <tr>
@@ -38,6 +40,9 @@ const AllProduct = ({ product }) => {
                 <button
                     onClick={() => handlePurchase(_id)}
                     className="btn btn-xs rounded-sm">Buy Now</button>
+                <button
+                    onClick={() => handleReview(_id)}
+                    className="btn btn-xs text-white rounded-sm ml-1">Review</button>
             </th>
         </tr>
     );

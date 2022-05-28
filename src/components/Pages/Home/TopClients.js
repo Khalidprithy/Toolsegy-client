@@ -8,7 +8,7 @@ const TopClients = () => {
 
     return (
         <div>
-            <h1 className='text-2xl font-bold text-center'>Our Top Clients</h1>
+            <h1 className='text-2xl font-bold text-center'>Our employees</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 m-2'>
                 {
                     clients.slice(0, 3).map(client => <ShowClient

@@ -26,7 +26,7 @@ const TopProduct = () => {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
                 {
                     products.slice(0, 4).map(product => <ShowProduct
-                        key={product.id}
+                        key={product._id}
                         product={product}
                     ></ShowProduct>)
                 }

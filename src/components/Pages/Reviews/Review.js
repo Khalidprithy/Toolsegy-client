@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = ({ review }) => {
     return (
-        <div className="card card-side border rounded-md p-4">
+        <div className="card card-compact bg-base-100 border rounded-lg">
             <div>
                 <div className="avatar">
                     <div className="w-28 rounded-md">
@@ -12,7 +12,7 @@ const Review = ({ review }) => {
                 <h2 className="font-bold">{review.name}</h2>
             </div>
             <div className="card-body">
-                <p>Reviewed on: {review.date}</p>
+
                 <p>{review.review}</p>
                 <div className="card-actions justify-end">
                     <div className="rating">

@@ -1,12 +1,48 @@
 [
     {
-        "company": "Fix tools",
+        "company": "CEO",
         "name": "Hammer Head",
         "address": "2104 Zika New York ",
         "phone": "017541241",
-        "email": "something@gmail.com",
+        "email": "hammer@gmail.com",
         "description": "Hello I am a tool for wood working",
         "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+    },
+    {
+        "company": "Fix tools",
+        "name": "Ryan Ogden",
+        "address": "2734 West Fork Street,EASTON 02334.",
+        "phone": "202-555-0174",
+        "email": "ryanogden@gmail.com",
+        "description": "Hello I am Ryan Ogden",
+        "photo": "https://i.ibb.co/Bn6nZmB/photo-1633332755192-727a05c4013d.jpg"
+    },
+    {
+        "company": "Quality Assurance",
+        "name": "Paul Slater",
+        "address": "2104 Zika Dhaka ",
+        "phone": "0545541241",
+        "email": "paul@gmail.com",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/X76Kmx8/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt-2736.webp"
+    },
+    {
+        "company": "QA/QC Engineer",
+        "name": "Jan Ince",
+        "address": "Modern more, Rangpur ",
+        "phone": "0148454241",
+        "email": "janeice@gmail.com",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/P56Y52X/unnamed.webp"
+    },
+    {
+        "company": "Marketing Head",
+        "name": "Steven Butler",
+        "address": "Kustia, 124 Bag ",
+        "phone": "017541241",
+        "email": "stevenbbb@gmail.com",
+        "description": "Hello I am a tool for wood working",
+        "photo": "https://i.ibb.co/MsYcxR7/depositphotos-27876691-stock-photo-funny-mature-man-with-beautiful.webp"
     },
     {
         "company": "Fix tools",
@@ -15,60 +51,24 @@
         "phone": "017541241",
         "email": "something@gmail.com",
         "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+        "photo": "https://i.ibb.co/HzQCQC5/depositphotos-128051000-stock-photo-handsome-man-in-spectacles.jpg"
     },
     {
-        "company": "Fix tools",
-        "name": "Hammer Head",
-        "address": "2104 Zika New York ",
-        "phone": "017541241",
-        "email": "something@gmail.com",
+        "company": "HR",
+        "name": "Rachel Parsons",
+        "address": "2104 Zika New Japan",
+        "phone": "01475451241",
+        "email": "prcrechar@gmail.com",
         "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+        "photo": "https://i.ibb.co/YWH2nwY/images-1.jpg"
     },
     {
-        "company": "Fix tools",
-        "name": "Hammer Head",
-        "address": "2104 Zika New York ",
-        "phone": "017541241",
-        "email": "something@gmail.com",
+        "company": "Sells Manager",
+        "name": "Lillian Powell",
+        "address": "Gaibangla Cow",
+        "phone": "0141541241",
+        "email": "mouwmouw@gmail.com",
         "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
-    },
-    {
-        "company": "Fix tools",
-        "name": "Hammer Head",
-        "address": "2104 Zika New York ",
-        "phone": "017541241",
-        "email": "something@gmail.com",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
-    },
-    {
-        "company": "Fix tools",
-        "name": "Hammer Head",
-        "address": "2104 Zika New York ",
-        "phone": "017541241",
-        "email": "something@gmail.com",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
-    },
-    {
-        "company": "Fix tools",
-        "name": "Hammer Head",
-        "address": "2104 Zika New York ",
-        "phone": "017541241",
-        "email": "something@gmail.com",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
-    },
-    {
-        "company": "Fix tools",
-        "name": "Hammer Head",
-        "address": "2104 Zika New York ",
-        "phone": "017541241",
-        "email": "something@gmail.com",
-        "description": "Hello I am a tool for wood working",
-        "photo": "https://i.ibb.co/HgzfcDK/client.jpg"
+        "photo": "https://i.ibb.co/Y8Xy3QF/images.jpg"
     }
 ]

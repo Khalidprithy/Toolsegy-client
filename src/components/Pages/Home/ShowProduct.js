@@ -8,6 +8,9 @@ const ShowProduct = ({ product }) => {
     const handleBuyNow = id => {
         navigate(`/products/${id}`)
     }
+    const handleReview = id => {
+        navigate(`/dashboard/myreview/${id}`)
+    }
 
     return (
         <div className="card card-compact bg-base-100 border rounded-lg">
@@ -24,6 +27,9 @@ const ShowProduct = ({ product }) => {
                     <button
                         onClick={() => handleBuyNow(_id)}
                         className="btn btn-xs btn-primary text-white rounded-sm">Buy Now</button>
+                    <button
+                        onClick={() => handleReview(_id)}
+                        className="btn btn-xs btn-primary text-white rounded-sm">Review</button>
                 </div>
             </div>
         </div>
