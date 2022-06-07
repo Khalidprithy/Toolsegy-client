@@ -1,5 +1,5 @@
 
-# Dev.Kbin
+# Toolsegy
 ## This is a website for an Tools manufacturer company
 This is a ReactJS app
 
@@ -8,7 +8,9 @@ This is a ReactJS app
 [client](https://toolsegy-9e5ff.web.app/)
 
 ## Documentation
-This is a react application build for a software developer & youtuber. In this website I have featured the courses he offers and also a shop for his fan to buy some of his products. 
+Warehouse Management Application. It is a warehouse management application built with React. I have also made the server-side with NodeJS and 
+MongoDB. I have used Tailwind and DaizyUI to design this application. I found this combination is flexible and productive. It also offers the flexibility to customize in the future. 
+
 ## Features used Client side
 - React
 - Tailwind
@@ -30,9 +32,9 @@ This is a react application build for a software developer & youtuber. In this w
 ### Login authentication
 - Login with email password 
 - Social login (Google)
-- Varify email 
+- Verify email 
 - Reset password 
-- Error massage for wrong emial password 
+- Error massage for wrong email password 
 
 
 
